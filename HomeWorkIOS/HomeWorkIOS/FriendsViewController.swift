@@ -5,6 +5,7 @@
 //  Created by Герман Яренко on 22.11.23.
 
 
+
 import UIKit
 
 final class FriendsViewController: UITableViewController {
@@ -25,7 +26,7 @@ final class FriendsViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(updateList), for: .valueChanged)
         
-        getFriends()
+        //getFriends()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,23 +58,23 @@ final class FriendsViewController: UITableViewController {
         return cell
     }
     
-    func getFriends() {
-        NetworkService().getFriends{ [weak self] result in
-            switch result {
-                case .success(let friends):
-                    self?.friends = friends
-                    self?.dataService.addFriends(friends: friends)
-                    DispatchQueue.main.async {
-                        self?.tableView.reloadData()
-                    }
-                case .failure(_):
-                    self?.friends = self?.dataService.getFriends() ?? []
-                    DispatchQueue.main.async {
-                        self?.showAlert()
-                    }
-            }
-        }
-    }
+//    func getFriends() {
+//        NetworkService().getFriends{ [weak self] result in
+//            switch result {
+//                case .success(let friends):
+//                    self?.friends = friends
+//                    self?.dataService.addFriends(friends: friends)
+//                    DispatchQueue.main.async {
+//                        self?.tableView.reloadData()
+//                    }
+//                case .failure(_):
+//                    self?.friends = self?.dataService.getFriends() ?? []
+//                    DispatchQueue.main.async {
+//                        self?.showAlert()
+//                    }
+//            }
+//        }
+//    }
 }
 
 

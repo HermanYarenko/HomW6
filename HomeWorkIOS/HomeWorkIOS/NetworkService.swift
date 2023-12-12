@@ -32,7 +32,7 @@ final class NetworkService {
                 return }
             do {
                 let friends = try JSONDecoder().decode(FriendsModel.self, from: data).response.items
-                completion(.success(friends))
+                completion(.success(friends ?? []))
             } catch { completion(.failure(error)) }
         }.resume()
     }

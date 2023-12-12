@@ -113,7 +113,6 @@
 		98CB75012B0E98DA00E18EE9 = {
 			isa = PBXGroup;
 			children = (
-				98DB85252B28C76B0091D828 /* CoreData.xcdatamodeld */,
 				98CB750C2B0E98DA00E18EE9 /* HomeWorkIOS */,
 				98CB75232B0E98DB00E18EE9 /* HomeWorkIOSTests */,
 				98CB752D2B0E98DC00E18EE9 /* HomeWorkIOSUITests */,
@@ -134,6 +133,7 @@
 		98CB750C2B0E98DA00E18EE9 /* HomeWorkIOS */ = {
 			isa = PBXGroup;
 			children = (
+				98DB85252B28C76B0091D828 /* CoreData.xcdatamodeld */,
 				98CB750D2B0E98DA00E18EE9 /* AppDelegate.swift */,
 				98CB750F2B0E98DA00E18EE9 /* SceneDelegate.swift */,
 				98CB75112B0E98DA00E18EE9 /* ViewController.swift */,

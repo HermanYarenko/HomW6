@@ -11,7 +11,7 @@ struct FriendsModel: Decodable {
 }
 
 struct Friends: Decodable {
-    var items: [Friend]
+    var items: [Friend]?
 }
 
 struct Friend: Decodable {
@@ -25,7 +25,7 @@ struct Friend: Decodable {
         case id
         case firstName = "first_name"
         case lastName = "last_name"
-        case photo = "photo_60"
+        case photo = "photo_200_orig"
         case online
     }
 }
