@@ -43,9 +43,7 @@ final class GroupCell: UITableViewCell {
         groupDescription.textColor = Theme.currentTheme.subtitleColor
         DispatchQueue.global().async {
             if let url = URL(string: model.photo ?? ""),
-               let data = try? Data(contentsOf: url)
-            {
-                DispatchQueue.main.async {
+               let data = try? Data(contentsOf: url){DispatchQueue.main.async {
                     self.groupsImageView.image = UIImage(data: data)
                 }
             }

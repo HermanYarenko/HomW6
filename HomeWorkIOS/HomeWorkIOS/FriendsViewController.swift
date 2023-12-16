@@ -4,10 +4,7 @@
 //
 //  Created by Герман Яренко on 22.11.23.
 
-
-
 import UIKit
-
 final class FriendsViewController: UITableViewController {
     
     private var friends = [Friend]()
@@ -26,7 +23,6 @@ final class FriendsViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(updateList), for: .valueChanged)
         
-        //getFriends()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,8 +72,6 @@ final class FriendsViewController: UITableViewController {
 //        }
 //    }
 }
-
-
 private extension FriendsViewController {
     func showAlert() {
 //        let date = DateConverter.dateConvert(date: dataService.getFriendDate())
@@ -104,8 +98,7 @@ private extension FriendsViewController {
                     DispatchQueue.main.async {
                         self?.tableView.reloadData()
                     }
-                case .failure(_):
-                    self?.friends = self?.dataService.getFriends() ?? []
+                case .failure(_):self?.friends = self?.dataService.getFriends() ?? []
                     DispatchQueue.main.async {
                         self?.showAlert()
                     }

@@ -4,8 +4,6 @@
 //
 //  Created by Герман Яренко on 22.11.23.
 //
-
-
 import UIKit
 
 final class PhotosViewController: UICollectionViewController {
@@ -16,7 +14,8 @@ final class PhotosViewController: UICollectionViewController {
         title = "Photos"
         
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: Constants.Identifier.photoCellIdentifier)
-        NetworkService().getPhotos{ [weak self] photos in
+        NetworkService().getPhotos {
+            [weak self] photos in
             self?.photos = photos
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()

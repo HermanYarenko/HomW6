@@ -3,8 +3,6 @@
 //  HomeWorkIOS
 //
 //  Created by Герман Яренко on 22.11.23.
-//51805360
-
 import UIKit
 import WebKit
 
@@ -54,8 +52,6 @@ class ViewController: UIViewController {
     }
     
 }
-
-
 extension ViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         guard let url = navigationResponse.response.url, url.path == "/blank.html", let fragment = url.fragment else {

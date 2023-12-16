@@ -5,9 +5,6 @@
 //  Created by Герман Яренко on 1.12.23.
 //
 
-
-
-
 import UIKit
 
 final class ProfileViewController: UIViewController {
@@ -63,8 +60,7 @@ final class ProfileViewController: UIViewController {
         DispatchQueue.global().async {
             if let url = URL(string: person.photo ?? ""),
                let data = try? Data(contentsOf: url)
-            {
-                DispatchQueue.main.async {
+            {DispatchQueue.main.async {                
                     self.personImageView.image = UIImage(data: data)
                 }
             }
@@ -107,8 +103,6 @@ final class ProfileViewController: UIViewController {
     }
     
 }
-
-
 private extension ProfileViewController {
     
     @objc func goToThemeViewController() {

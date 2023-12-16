@@ -9,7 +9,6 @@ import Foundation
 import CoreData
 
 final class DataService {
-    
     lazy var persistentContainer: NSPersistentContainer = {
         let persistentContainer = NSPersistentContainer(name: "CoreData")
         persistentContainer.loadPersistentStores(completionHandler: { (_, error) in
@@ -19,7 +18,6 @@ final class DataService {
         })
         return persistentContainer
     }()
-    
     func save() {
         if persistentContainer.viewContext.hasChanges {
             do {
@@ -29,7 +27,6 @@ final class DataService {
             }
         }
     }
-    
     func addFriends(friends: [Friend]) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FriendModelCD")
         for friend in friends {
@@ -46,7 +43,6 @@ final class DataService {
         save()
 //        addFriendDate()
     }
-    
     func getFriends() -> [Friend] {
         let request: NSFetchRequest<FriendModelCD> = FriendModelCD.fetchRequest()
         guard let friends = try? persistentContainer.viewContext.fetch(request) else { return [] }
@@ -56,11 +52,9 @@ final class DataService {
         }
         return newFrinds
     }
-    
     func addFriendDate() {
 
     }
-    
 //    func delete(object: NSManagedObject) {
 //        persistentContainer.viewContext.delete(object)
 //        save()

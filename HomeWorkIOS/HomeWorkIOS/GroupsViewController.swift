@@ -5,7 +5,6 @@
 //  Created by Герман Яренко on 22.11.23.
 //
 
-
 import UIKit
 
 final class GroupsViewController: UITableViewController {
@@ -16,7 +15,7 @@ final class GroupsViewController: UITableViewController {
         title = "Groups"
         
         tableView.register(GroupCell.self, forCellReuseIdentifier: Constants.Identifier.photoCellIdentifier)
-        NetworkService().getGroups{ [weak self] groups in
+NetworkService().getGroups{[weak self] groups in
             self?.groups = groups
             DispatchQueue.main.async {
                 self?.tableView.reloadData()

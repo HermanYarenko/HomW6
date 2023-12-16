@@ -5,13 +5,8 @@
 //  Created by Герман Яренко on 10.12.23.
 //
 
-
-
-
 import UIKit
-
 final class ThemeViewController: UIViewController {
-    
     private var buttonThemeWhite: UIButton = {
         let button = UIButton()
         button.setTitle("White theme", for: .normal)
@@ -90,8 +85,6 @@ final class ThemeViewController: UIViewController {
     }
     
 }
-
-
 private extension ThemeViewController {
     @objc func tapWhiteTheme() {
         Theme.currentTheme = WhiteTheme()

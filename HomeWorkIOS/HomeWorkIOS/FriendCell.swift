@@ -4,10 +4,7 @@
 //
 //  Created by Герман Яренко on 22.11.23.
 
-
-
 import UIKit
-
 final class FriendCell: UITableViewCell {
     
     var tap: ((String?, UIImage?) -> Void)?
@@ -55,8 +52,7 @@ final class FriendCell: UITableViewCell {
         friendOnline.textColor = Theme.currentTheme.textOnlineColor
         DispatchQueue.global().async {
             if let url = URL(string: model.photo ?? ""),
-               let data = try? Data(contentsOf: url)
-            {
+               let data = try? Data(contentsOf: url){
                 DispatchQueue.main.async {
                     self.friendImageView.image = UIImage(data: data)
                 }

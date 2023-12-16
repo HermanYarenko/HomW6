@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9855DFF72B2BA6B1001B37C8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9855DFF62B2BA6B1001B37C8 /* .swiftlint.yml */; };
 		98AAA4382B25E2B60085506C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAA4372B25E2B60085506C /* DataService.swift */; };
 		98AAA43A2B25E2EA0085506C /* DateConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAA4392B25E2EA0085506C /* DateConvert.swift */; };
 		98AAA43C2B25E4B40085506C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAA43B2B25E4B40085506C /* Theme.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9855DFF62B2BA6B1001B37C8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		98AAA4372B25E2B60085506C /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		98AAA4392B25E2EA0085506C /* DateConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConvert.swift; sourceTree = "<group>"; };
 		98AAA43B2B25E4B40085506C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		98CB75012B0E98DA00E18EE9 = {
 			isa = PBXGroup;
 			children = (
+				9855DFF62B2BA6B1001B37C8 /* .swiftlint.yml */,
 				98CB750C2B0E98DA00E18EE9 /* HomeWorkIOS */,
 				98CB75232B0E98DB00E18EE9 /* HomeWorkIOSTests */,
 				98CB752D2B0E98DC00E18EE9 /* HomeWorkIOSUITests */,
@@ -188,6 +191,7 @@
 				98CB75062B0E98DA00E18EE9 /* Sources */,
 				98CB75072B0E98DA00E18EE9 /* Frameworks */,
 				98CB75082B0E98DA00E18EE9 /* Resources */,
+				9855DFF82B2BB873001B37C8 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -282,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9855DFF72B2BA6B1001B37C8 /* .swiftlint.yml in Resources */,
 				98CB751A2B0E98DB00E18EE9 /* LaunchScreen.storyboard in Resources */,
 				98CB75172B0E98DB00E18EE9 /* Assets.xcassets in Resources */,
 			);
@@ -302,6 +307,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9855DFF82B2BB873001B37C8 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.swiftlint.yml",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\n    swiftlint -fix && swiftlint\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98CB75062B0E98DA00E18EE9 /* Sources */ = {
@@ -503,6 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTWYGD5HP5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWorkIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -530,6 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTWYGD5HP5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWorkIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -557,6 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTWYGD5HP5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -577,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTWYGD5HP5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -596,6 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTWYGD5HP5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yarenkob-mail.ru.HomeWorkIOSUITests";
@@ -614,6 +646,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTWYGD5HP5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yarenkob-mail.ru.HomeWorkIOSUITests";

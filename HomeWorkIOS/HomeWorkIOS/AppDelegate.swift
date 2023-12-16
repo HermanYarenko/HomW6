@@ -4,11 +4,7 @@
 //
 //  Created by Герман Яренко on 22.11.23.
 //
-
-
-
 import UIKit
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
